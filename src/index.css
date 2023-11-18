@@ -99,6 +99,14 @@ a {
   border-color: var(--solarized);
 }
 
+.pd_top {
+  padding-top: 0 !important;
+}
+
+.mg_top {
+  margin-top: 4rem;
+}
+
 /* #endregion */
 /* #region fonts */
 .text-center {
@@ -225,8 +233,8 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
-  padding-top: 6rem !important;
-  padding-bottom: 6rem !important;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .box__btn_wrap {
   width: 300px;
@@ -362,15 +370,6 @@ a {
   font-size: 16px;
   color: var(--burka-black);
   padding: 0 0 12px 12px;
-}
-
-/* #endregion */
-/* #region list */
-.list {
-  padding-top: 4rem;
-}
-.list__content {
-  padding-top: 0 !important;
 }
 
 /* #endregion */
@@ -610,7 +609,8 @@ a {
     width: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding: 0 24px;
+    padding-right: 24px;
+    padding-left: 24px;
   }
   .form {
     max-width: 600px;

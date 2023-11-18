@@ -30,7 +30,9 @@ const PageOne = () => {
           <Form setSearchParams={setSearchParams} paramsFeedback={paramsFeedback} />
         </>
       }
-      <Card catalog={catalog} category={category} />
+      <div className="box__content container">
+        <Card />
+      </div>
       <Tracker catalog={catalog} onTrack={handleTrack} />
     </>
   );
@@ -38,6 +40,7 @@ const PageOne = () => {
 
 
 const categoryLoader = async ({ request, params }) => {
+
   const category = params.category
   const url = new URL(request.url);
   const search = "?" + url.searchParams.toString();

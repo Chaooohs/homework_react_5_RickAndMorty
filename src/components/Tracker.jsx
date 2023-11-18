@@ -1,3 +1,5 @@
+import { useSearchParams, useLoaderData, } from "react-router-dom";
+
 const Tracker = ({ catalog, onTrack }) => {
 
   let prev = catalog.info.prev
