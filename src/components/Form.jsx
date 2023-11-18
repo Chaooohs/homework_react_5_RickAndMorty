@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Select } from "../components/Select";
+import { Select } from "./Select";
 
-const Form = ({ category, setSearchParams, paramsFeedback }) => {
+const Form = ({ setSearchParams, paramsFeedback }) => {
 
   const [search, setSearch] = useState(paramsFeedback)
 

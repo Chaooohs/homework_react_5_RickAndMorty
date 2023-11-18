@@ -1,6 +1,6 @@
-import { NavLink, Link } from 'react-router-dom'
-import logo2 from '../img/logo2.png'
 import { useState, useEffect } from 'react'
+import { NavLink, Link } from 'react-router-dom'
+import logo from '../img/logo.png'
 
 const Header = ({ tabs }) => {
 
@@ -14,7 +14,7 @@ const Header = ({ tabs }) => {
         <div className={`header ${isOpen ? "open" : ""}`}>
           <div className="header_box container">
             <Link to="/">
-              <img className='header__logo' src={logo2} alt="logo"></img>
+              <img className='header__logo' src={logo} alt="logo"></img>
             </Link>
             <div className="header_nav">
               {

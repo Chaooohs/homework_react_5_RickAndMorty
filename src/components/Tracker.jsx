@@ -1,7 +1,5 @@
 const Tracker = ({ catalog, onTrack }) => {
 
-  if (catalog.length === 0) return
-
   let prev = catalog.info.prev
   let next = catalog.info.next
 

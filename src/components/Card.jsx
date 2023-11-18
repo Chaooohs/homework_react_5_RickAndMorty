@@ -8,41 +8,27 @@ const Card = ({ catalog, category }) => {
   return (
     <div className="box__content container">
       {
-        catalog.results.map((el, index) => {
+        catalog.results.map((el) => {
 
-          if (category === 'character') {
-            return (
-              <Link className="card"
-                key={`${index}`}
-                to={`${el.id}`}>
-                <img className="card__image" src={el.image}></img>
-                <p className="card__name">{truncate(el.name, 15)}</p>
-              </Link>
-            )
-          }
-          else if (category === 'location') {
-            return (
-              <Link className="card"
-                key={index}
-                to={`${el.id}`}>
-                <p className="card__name">{truncate(el.name, 16)}</p>
+          return (
+            <Link className="card"
+              key={`${el.id}`}
+              to={`${el.id}`}>
+              <img className="card__image" src={el.image}></img>
+              <p className="card__name">{truncate(el.name, 15)}</p>
+              {
+                category === 'location' &&
                 <span className="card__text">{el.type}</span>
-              </Link>
-            )
-          }
-          else if (category === 'episode') {
-            return (
-              <Link className="card"
-                key={index}
-                to={`${el.id}`}>
-                <p className="card__name">{truncate(el.name, 16)}</p>
+              }
+              {
+                category === 'episode' &&
                 <span className="card__text">{el.episode}</span>
-              </Link>
-            )
-          }
+              }
+            </Link>
+          )
         })
       }
-    </div>
+    </div >
   )
 }
 

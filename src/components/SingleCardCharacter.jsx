@@ -1,5 +1,10 @@
+import { Link } from "react-router-dom"
 
-const SingleCardCharacter = ({ cards, onOpenList }) => {
+const SingleCardCharacter = ({ cards }) => {
+
+  const location = cards.location.url.split('/').slice(-1)[0]
+  let episode = []
+  cards.episode.map(el => episode.push(el.split('/').slice(-1)[0]))
 
   return (
     <div className="two__card card">
@@ -23,9 +28,12 @@ const SingleCardCharacter = ({ cards, onOpenList }) => {
           <span className="two__status text_sm">{cards.gender}</span>
         </div>
         <div className="two__link_wrap">
-          <button className='two__link btn_txt text_sm hover_rd' onClick={() => onOpenList(cards.origin, 'location')}>Origin &#10149;</button>
-          <button className='two__link btn_txt text_sm hover_rd' onClick={() => onOpenList(cards.location, 'location')}>Location &#10149;</button>
-          <button className='two__link btn_txt text_sm hover_rd' onClick={() => onOpenList(cards.episode, 'episode')}>Eposode &#10149;</button>
+          <Link className="two__link btn_txt text_sm hover_rd"
+            to={`/location/${location}`}>Origin &#10149;</Link>
+          <Link className="two__link btn_txt text_sm hover_rd"
+            to={`/location/${location}`}>Location &#10149;</Link>
+          <Link className="two__link btn_txt text_sm hover_rd"
+            to={`/episode/${episode}`}>Eposode &#10149;</Link>
         </div>
       </div>
     </div>

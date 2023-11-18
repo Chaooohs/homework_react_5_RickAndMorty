@@ -181,14 +181,25 @@ a {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  width: 100%;
-  font-size: 50px;
   background-color: var(--burka-black);
 
-  &__layout_img {
+  &__index {
     flex: 1 1 auto;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__index p {
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: .5px;
+    color: var(--text-blue);
+    margin-top: 5rem;
+  }
+
+  &__index a {
+    color: var(--solarized);
   }
 
   &__img {
@@ -202,13 +213,14 @@ a {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
     padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
   }
 
   &__btn_wrap {
     width: 300px;
     display: flex;
     column-gap: 1rem;
-    margin: 70px auto 46px;
+    margin: 0 auto 46px;
   }
 
   &__btn {
@@ -313,15 +325,11 @@ a {
 
 .card {
   display: grid;
-  grid-auto-rows: 3fr 1fr;
   font-size: 1rem;
-  text-decoration: none;
   border-radius: 8px;
   background-color: var(--solarized);
 
   &__image {
-    height: 100%;
-    object-fit: cover;
     border-radius: 8px 8px 0 0;
   }
 
@@ -346,31 +354,31 @@ a {
 
 /* #endregion */
 
+/* #region list */
+
+.list {
+  padding-top: 4rem;
+
+  &__content {
+    padding-top: 0 !important;
+  }
+}
+
+/* #endregion */
+
 /* #region page-two */
 
 .two {
-  width: 70%;
   flex: 1 1 auto;
   display: flex;
-  column-gap: 2rem;
   box-sizing: border-box;
-  padding: 4rem 2rem;
-  margin: 0 auto;
-  // background: url('../src/img/crying1.jpg') center / cover no-repeat;
+  padding: 4rem 0;
 
-  &__left {
-    width: 50%;
+  &__content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
-  }
-
-  &__right {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    row-gap: 30px;
   }
 
   &__back {
@@ -424,37 +432,6 @@ a {
     width: min-content;
     line-height: 120%;
   }
-
-  &__list {
-    width: 100%;
-    border-radius: 8px;
-    background-color: var(--burka-black);
-    box-sizing: border-box;
-  }
-
-  &__list_link {
-    width: 100%;
-    display: block;
-    font-size: 10px;
-  }
-
-  &__list_text {
-    box-sizing: border-box;
-    padding: 1rem;
-  }
-
-
-  &__list_image {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-
-  &__list_image_link {
-    cursor: pointer;
-  }
 }
 
 /* #endregion */
@@ -469,6 +446,37 @@ a {
     height: 50%;
     border-radius: 16px;
     border-top: 3px solid var(--solarized);
+  }
+}
+
+/* #endregion */
+
+/* #region error-page */
+
+.error-page {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: var(--text-letsp);
+  background-color: var(--burka-black);
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--solarized);
+  }
+
+  &__subtitle {
+    color: var(--text-blue);
+  }
+
+  &__errror {
+    color: var(--green);
   }
 }
 
@@ -588,7 +596,6 @@ a {
 
   .select__wrap {
     width: 100%;
-    // flex-direction: column;
     justify-content: space-between;
     row-gap: 60px;
     box-sizing: border-box;
@@ -608,14 +615,6 @@ a {
     width: 100%;
   }
 
-  .card {
-    grid-auto-rows: 0fr 0fr;
-  }
-
-  .card__image {
-    height: auto;
-  }
-
   .card__name {
     font-size: 14px;
   }
@@ -627,24 +626,6 @@ a {
   .two {
     width: 100%;
     flex-direction: column;
-    row-gap: 30px;
-  }
-
-  .two__left,
-  .two__right {
-    width: 100%;
-  }
-
-  .two__left {
-    row-gap: 30px;
-  }
-
-  .two__card {
-    order: 2;
-  }
-
-  .two__list_image {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   }
 }
 

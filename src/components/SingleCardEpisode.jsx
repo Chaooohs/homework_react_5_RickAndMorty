@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom"
 
-const SingleCardEpisode = ({ cards, onOpenList }) => {
-
+const SingleCardEpisode = ({ cards }) => {
+  
+  let characters = []
+  cards.characters.map(el => characters.push(el.split('/').slice(-1)[0]))
+ 
   return (
     <div className="two__card card">
       <div className="two__descript">
@@ -14,7 +18,8 @@ const SingleCardEpisode = ({ cards, onOpenList }) => {
           <span className="two__status text_sm">{cards.episode}</span>
         </div>
         <div className="two__link_wrap">
-          <button className='two__link btn_txt text_sm hover_rd' onClick={() => onOpenList(cards.characters, 'character')}>Characters &#10149;</button>
+          <Link className="two__link btn_txt text_sm hover_rd"
+            to={`/character/${characters}`}>Characters &#10149;</Link>
         </div>
       </div>
     </div>
