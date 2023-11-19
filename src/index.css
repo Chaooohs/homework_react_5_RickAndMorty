@@ -267,7 +267,7 @@ a {
   color: var(--solarized);
 }
 .box__btn:hover {
-  background-color: var(--blood-thorn);
+  background-color: var(--pink);
 }
 
 /* #endregion */
@@ -300,8 +300,8 @@ a {
   color: var(--solarized);
 }
 .form__button:hover {
-  border: 1px solid var(--blood-thorn);
-  background-color: var(--blood-thorn);
+  border: 1px solid var(--pink);
+  background-color: var(--pink);
 }
 .form__select:active, .form__button:active {
   -webkit-transform: none;

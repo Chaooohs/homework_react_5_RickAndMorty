@@ -1,4 +1,3 @@
-import { useSearchParams, useLoaderData, } from "react-router-dom";
 
 const Tracker = ({ catalog, onTrack }) => {
 
@@ -27,4 +26,5 @@ const Tracker = ({ catalog, onTrack }) => {
     </>
   )
 }
+
 export { Tracker }
