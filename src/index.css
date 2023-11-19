@@ -556,7 +556,7 @@ a {
   .header {
     position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 30;
   }
   .header_nav {
     position: fixed;
@@ -564,24 +564,21 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 60%;
-    top: 73px;
+    top: 0;
     right: 0;
     bottom: 0;
-    z-index: 900;
-    padding: 24px 0;
+    left: 0;
+    padding: 80px 0;
     color: var(--solarized);
-    background-color: var(--burka-black);
+    background-color: var(--biro-blue);
     -webkit-transform: translateX(105%);
         -ms-transform: translateX(105%);
             transform: translateX(105%);
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
-    -webkit-box-shadow: 0 24px 12px 0px rgb(0, 0, 0);
-            box-shadow: 0 24px 12px 0px rgb(0, 0, 0);
   }
   .header__link {
-    width: 50%;
+    width: 30%;
     padding: 16px 0;
   }
   .burger {
