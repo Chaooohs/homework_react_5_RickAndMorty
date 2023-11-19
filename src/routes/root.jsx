@@ -11,7 +11,6 @@ const rootLoader = async () => {
 
 
 const Root = () => {
-
   const tabs = useLoaderData();
 
   return (

@@ -464,6 +464,27 @@ a {
 }
 
 /* #endregion */
+/* #region up button */
+.up {
+  position: fixed;
+  right: 10vw;
+  bottom: 100px;
+  z-index: 20;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+  background: url("../src/img/hand-up-halloween.png") 0 0/100% no-repeat;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.up:hover {
+  opacity: 1;
+}
+
+/* #endregion */
 /* #region error-page */
 .error-page {
   -webkit-box-flex: 1;

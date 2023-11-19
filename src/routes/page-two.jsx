@@ -1,4 +1,5 @@
 import { useLoaderData, } from "react-router-dom"
+import { useScrollToTop } from "../hooks/useScrollToTop"
 
 import { SingleCardCharacter } from "../components/SingleCardCharacter"
 import { SingleCardLocation } from "../components/SingleCardLocation"
@@ -10,7 +11,8 @@ import { Card } from "../components/Card"
 const PageTwo = () => {
 
   const { results, category, } = useLoaderData();
-
+  const [showTopBtn, goToTop] = useScrollToTop()
+  
   return (
     <>
       {
@@ -22,6 +24,10 @@ const PageTwo = () => {
             <div className="container">
               <div className="box__content pd_top">
                 <Card />
+                {
+                  showTopBtn &&
+                  <button className="up" onClick={goToTop}></button>
+                }
               </div>
             </div>
           </div>

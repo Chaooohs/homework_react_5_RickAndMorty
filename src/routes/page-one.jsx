@@ -10,7 +10,7 @@ const PageOne = () => {
 
   const { catalog, category, } = useLoaderData()
   const [searchParams, setSearchParams] = useSearchParams()
-
+  
   const paramsFeedback = {}
   paramsFeedback.name = searchParams.get('name') || ''
   paramsFeedback.status = searchParams.get('status') || ''
@@ -19,7 +19,7 @@ const PageOne = () => {
 
 
   useEffect(() => window.scrollTo(0, 0));
-  const handleTrack = (track) => setSearchParams(track)
+  const handleTrack = (track) =>  setSearchParams(track)
 
   return (
     <>
