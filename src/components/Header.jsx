@@ -13,8 +13,8 @@ const Header = ({ tabs }) => {
       <header>
         <div className={`header ${isOpen ? "open" : ""}`}>
           <div className="header_box container">
-            <Link to="/">
-              <img className='header__logo' src={logo} alt="logo"></img>
+            <Link className='header__logo'  to="/">
+              <img src={logo} alt="logo"></img>
             </Link>
             <div className="header_nav">
               {

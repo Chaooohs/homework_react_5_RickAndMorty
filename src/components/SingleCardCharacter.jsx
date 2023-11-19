@@ -14,13 +14,13 @@ const SingleCardCharacter = ({ cards }) => {
         <div className="two__status_wrap">
           {cards.status === 'Alive' &&
             <>
-              <span className="two__status text_sm" style={{ color: "#009b7d" }}>{cards.status}</span>
+              <span className="two__status text_sm" style={{ color: "#03b881" }}>{cards.status}</span>
               <span className="two__status text_sm">&nbsp;&ndash;&nbsp;</span>
             </>
           }
           {cards.status === 'Dead' &&
             <>
-              <span className="two__status text_sm" style={{ color: "#ea3c53" }}>{cards.status}</span>
+              <span className="two__status text_sm" style={{ color: "#fc477e" }}>{cards.status}</span>
               <span className="two__status text_sm">&nbsp;&ndash;&nbsp;</span>
             </>
           }
