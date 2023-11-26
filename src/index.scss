@@ -1,27 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+
+$burka-black: #354051;
+$biro-blue: #303a49;
+$solarized: #fbcf48;
+$qing-dynasty-fire: #d82665;
+$blood-thorn: #ab3050;
+$pink: #fc477e;
+$green: #03b881;
+
+$red: #ea3c53;
+$green-light: #76ff76;
+
+$text-white: #fff;
+$text-blue: #c4dae7;
+$text-letsp: 1px;
+$text-card: 14px;
+
+
 /* #region tags */
 
 html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-  --burka-black: #354051;
-  --biro-blue: #303a49;
-  --solarized: #fbcf48;
-  --qing-dynasty-fire: #d82665;
-  --blood-thorn: #ab3050;
-  --pink: #fc477e;
-  --green: #03b881;
-
-  --red: #ea3c53;
-  --green-light: #76ff76;
-
-  --text-white: #fff;
-  --text-blue: #c4dae7;
-  --text-letsp: 1px;
-  --text-card: 14px;
 }
 
 body {
@@ -88,7 +90,7 @@ a {
   transition: all .1s linear;
 
   &:hover {
-    color: var(--pink);
+    color: $pink;
   }
 }
 
@@ -96,8 +98,8 @@ a {
   transition: all .1s linear;
 
   &:hover {
-    color: var(--solarized);
-    border-color: var(--solarized);
+    color: $solarized;
+    border-color: $solarized;
   }
 }
 
@@ -121,18 +123,18 @@ a {
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
-  letter-spacing: var(--text-letsp);
-  color: var(--text-blue);
+  letter-spacing: $text-letsp;
+  color: $text-blue;
   cursor: pointer;
 }
 
 .text_sm {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
-  font-size: var(--text-card);
-  letter-spacing: var(--text-letsp);
+  font-size: $text-card;
+  letter-spacing: $text-letsp;
   line-height: 1;
-  color: var(--text-blue);
+  color: $text-blue;
 }
 
 /* #endregion */
@@ -141,7 +143,7 @@ a {
 
 .header {
   position: relative;
-  background-color: var(--biro-blue);
+  background-color: $biro-blue;
 
   &::before {
     content: '';
@@ -151,7 +153,7 @@ a {
     left: 0;
     right: 0;
     height: 60px;
-    background-color: var(--biro-blue);
+    background-color: $biro-blue;
     box-shadow: 0 1px 12px 0px rgba(0 0 0 / 100%);
   }
 
@@ -177,8 +179,8 @@ a {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: var(--text-letsp);
-    color: var(--text-blue);
+    letter-spacing: $text-letsp;
+    color: $text-blue;
 
     width: 100%;
     box-sizing: border-box;
@@ -192,7 +194,7 @@ a {
 }
 
 .active {
-  color: var(--solarized);
+  color: $solarized;
   cursor: default;
 }
 
@@ -204,7 +206,7 @@ a {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  background-color: var(--burka-black);
+  background-color: $burka-black;
 
   &__index {
     flex: 1 1 auto;
@@ -217,12 +219,12 @@ a {
     font-size: 24px;
     text-align: center;
     letter-spacing: .5px;
-    color: var(--text-blue);
+    color: $text-blue;
     margin-top: 5rem;
   }
 
   &__index a {
-    color: var(--solarized);
+    color: $solarized;
   }
 
   &__img {
@@ -247,14 +249,14 @@ a {
   }
 
   &__btn {
-    letter-spacing: var(--text-letsp);
+    letter-spacing: $text-letsp;
     margin: 2rem auto;
-    background-color: var(--qing-dynasty-fire);
-    color: var(--solarized);
+    background-color: $qing-dynasty-fire;
+    color: $solarized;
   }
 
   &__btn:hover {
-    background-color: var(--pink);
+    background-color: $pink;
   }
 }
 
@@ -274,9 +276,9 @@ a {
     font-size: 18px;
     outline: none;
     border-radius: 8px 0 0 8px;
-    border: 1px solid var(--text-blue);
+    border: 1px solid $text-blue;
     border-right: none;
-    color: var(--text-blue);
+    color: $text-blue;
     background: transparent;
     padding-left: 20px;
   }
@@ -285,14 +287,14 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 0 8px 8px 0;
-    border: 1px solid var(--qing-dynasty-fire);
-    background-color: var(--qing-dynasty-fire);
-    color: var(--solarized);
+    border: 1px solid $qing-dynasty-fire;
+    background-color: $qing-dynasty-fire;
+    color: $solarized;
   }
 
   &__button:hover {
-    border: 1px solid var(--pink);
-    background-color: var(--pink);
+    border: 1px solid $pink;
+    background-color: $pink;
   }
 
   &__select:active,
@@ -338,7 +340,7 @@ a {
   }
 
   &__option {
-    color: var(--burka-black);
+    color: $burka-black;
   }
 }
 
@@ -350,7 +352,7 @@ a {
   display: grid;
   font-size: 1rem;
   border-radius: 8px;
-  background-color: var(--solarized);
+  background-color: $solarized;
 
   &__image {
     border-radius: 8px 8px 0 0;
@@ -360,8 +362,8 @@ a {
     font-size: 22px;
     font-weight: 600;
     line-height: 1.8;
-    letter-spacing: var(--text-letsp);
-    color: var(--burka-black);
+    letter-spacing: $text-letsp;
+    color: $burka-black;
     box-sizing: border-box;
     padding: 12px;
     margin: 0;
@@ -370,7 +372,7 @@ a {
   &__text {
     font-weight: bold;
     font-size: 16px;
-    color: var(--burka-black);
+    color: $burka-black;
     padding: 0 0 12px 12px;
   }
 }
@@ -393,13 +395,13 @@ a {
   }
 
   &__back {
-    background-color: var(--biro-blue);
-    color: var(--solarized);
+    background-color: $biro-blue;
+    color: $solarized;
   }
 
   &__back:hover {
-    background-color: var(--solarized);
-    color: var(--burka-black);
+    background-color: $solarized;
+    color: $burka-black;
   }
 
   &__card {
@@ -407,7 +409,7 @@ a {
     width: 100%;
     max-width: 300px;
     height: fit-content;
-    background-color: var(--burka-black);
+    background-color: $burka-black;
   }
 
   &__descript {
@@ -419,8 +421,8 @@ a {
 
   &__name {
     font-size: clamp(18px, 2cqi, 26px);
-    letter-spacing: var(--text-letsp);
-    color: var(--solarized);
+    letter-spacing: $text-letsp;
+    color: $solarized;
     padding: 0;
   }
 
@@ -451,12 +453,12 @@ a {
 
 .footer {
   height: 60px;
-  background-color: var(--biro-blue);
+  background-color: $biro-blue;
 
   &__border {
     height: 50%;
     border-radius: 16px;
-    border-top: 3px solid var(--solarized);
+    border-top: 3px solid $solarized;
   }
 }
 
@@ -495,22 +497,22 @@ a {
   align-items: center;
   text-align: center;
   font-size: 20px;
-  letter-spacing: var(--text-letsp);
-  background-color: var(--burka-black);
+  letter-spacing: $text-letsp;
+  background-color: $burka-black;
 
   &__title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--solarized);
+    color: $solarized;
   }
 
   &__subtitle {
-    color: var(--text-blue);
+    color: $text-blue;
   }
 
   &__errror {
-    color: var(--green);
+    color: $green;
   }
 }
 
@@ -561,8 +563,8 @@ a {
     left: 0;
     padding: 60px 0 0 0;
 
-    color: var(--solarized);
-    background-color: var(--biro-blue);
+    color: $solarized;
+    background-color: $biro-blue;
     transform: translateY(-105%);
     transition: all .3s linear;
   }

@@ -4,19 +4,6 @@
 html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  --burka-black: #354051;
-  --biro-blue: #303a49;
-  --solarized: #fbcf48;
-  --qing-dynasty-fire: #d82665;
-  --blood-thorn: #ab3050;
-  --pink: #fc477e;
-  --green: #03b881;
-  --red: #ea3c53;
-  --green-light: #76ff76;
-  --text-white: #fff;
-  --text-blue: #c4dae7;
-  --text-letsp: 1px;
-  --text-card: 14px;
 }
 
 body {
@@ -89,7 +76,7 @@ a {
   transition: all 0.1s linear;
 }
 .hover_rd:hover {
-  color: var(--pink);
+  color: #fc477e;
 }
 
 .hover_ylw {
@@ -97,8 +84,8 @@ a {
   transition: all 0.1s linear;
 }
 .hover_ylw:hover {
-  color: var(--solarized);
-  border-color: var(--solarized);
+  color: #fbcf48;
+  border-color: #fbcf48;
 }
 
 .pd_top {
@@ -119,25 +106,25 @@ a {
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
-  letter-spacing: var(--text-letsp);
-  color: var(--text-blue);
+  letter-spacing: 1px;
+  color: #c4dae7;
   cursor: pointer;
 }
 
 .text_sm {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
-  font-size: var(--text-card);
-  letter-spacing: var(--text-letsp);
+  font-size: 14px;
+  letter-spacing: 1px;
   line-height: 1;
-  color: var(--text-blue);
+  color: #c4dae7;
 }
 
 /* #endregion */
 /* #region header */
 .header {
   position: relative;
-  background-color: var(--biro-blue);
+  background-color: #303a49;
 }
 .header::before {
   content: "";
@@ -147,7 +134,7 @@ a {
   left: 0;
   right: 0;
   height: 60px;
-  background-color: var(--biro-blue);
+  background-color: #303a49;
   -webkit-box-shadow: 0 1px 12px 0px rgb(0, 0, 0);
           box-shadow: 0 1px 12px 0px rgb(0, 0, 0);
 }
@@ -180,8 +167,8 @@ a {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: var(--text-letsp);
-  color: var(--text-blue);
+  letter-spacing: 1px;
+  color: #c4dae7;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -194,7 +181,7 @@ a {
 }
 
 .active {
-  color: var(--solarized);
+  color: #fbcf48;
   cursor: default;
 }
 
@@ -211,7 +198,7 @@ a {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  background-color: var(--burka-black);
+  background-color: #354051;
 }
 .box__index {
   -webkit-box-flex: 1;
@@ -232,11 +219,11 @@ a {
   font-size: 24px;
   text-align: center;
   letter-spacing: 0.5px;
-  color: var(--text-blue);
+  color: #c4dae7;
   margin-top: 5rem;
 }
 .box__index a {
-  color: var(--solarized);
+  color: #fbcf48;
 }
 .box__img {
   display: block;
@@ -261,13 +248,13 @@ a {
   margin: 0 auto 46px;
 }
 .box__btn {
-  letter-spacing: var(--text-letsp);
+  letter-spacing: 1px;
   margin: 2rem auto;
-  background-color: var(--qing-dynasty-fire);
-  color: var(--solarized);
+  background-color: #d82665;
+  color: #fbcf48;
 }
 .box__btn:hover {
-  background-color: var(--pink);
+  background-color: #fc477e;
 }
 
 /* #endregion */
@@ -285,9 +272,9 @@ a {
   font-size: 18px;
   outline: none;
   border-radius: 8px 0 0 8px;
-  border: 1px solid var(--text-blue);
+  border: 1px solid #c4dae7;
   border-right: none;
-  color: var(--text-blue);
+  color: #c4dae7;
   background: transparent;
   padding-left: 20px;
 }
@@ -295,13 +282,13 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 0 8px 8px 0;
-  border: 1px solid var(--qing-dynasty-fire);
-  background-color: var(--qing-dynasty-fire);
-  color: var(--solarized);
+  border: 1px solid #d82665;
+  background-color: #d82665;
+  color: #fbcf48;
 }
 .form__button:hover {
-  border: 1px solid var(--pink);
-  background-color: var(--pink);
+  border: 1px solid #fc477e;
+  background-color: #fc477e;
 }
 .form__select:active, .form__button:active {
   -webkit-transform: none;
@@ -354,7 +341,7 @@ a {
           flex-direction: column;
 }
 .select__option {
-  color: var(--burka-black);
+  color: #354051;
 }
 
 /* #endregion */
@@ -363,7 +350,7 @@ a {
   display: grid;
   font-size: 1rem;
   border-radius: 8px;
-  background-color: var(--solarized);
+  background-color: #fbcf48;
 }
 .card__image {
   border-radius: 8px 8px 0 0;
@@ -372,8 +359,8 @@ a {
   font-size: 22px;
   font-weight: 600;
   line-height: 1.8;
-  letter-spacing: var(--text-letsp);
-  color: var(--burka-black);
+  letter-spacing: 1px;
+  color: #354051;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 12px;
@@ -382,7 +369,7 @@ a {
 .card__text {
   font-weight: bold;
   font-size: 16px;
-  color: var(--burka-black);
+  color: #354051;
   padding: 0 0 12px 12px;
 }
 
@@ -413,12 +400,12 @@ a {
   row-gap: 30px;
 }
 .two__back {
-  background-color: var(--biro-blue);
-  color: var(--solarized);
+  background-color: #303a49;
+  color: #fbcf48;
 }
 .two__back:hover {
-  background-color: var(--solarized);
-  color: var(--burka-black);
+  background-color: #fbcf48;
+  color: #354051;
 }
 .two__card {
   grid-auto-rows: auto;
@@ -427,7 +414,7 @@ a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: var(--burka-black);
+  background-color: #354051;
 }
 .two__descript {
   display: grid;
@@ -438,8 +425,8 @@ a {
 }
 .two__name {
   font-size: clamp(18px, 2cqi, 26px);
-  letter-spacing: var(--text-letsp);
-  color: var(--solarized);
+  letter-spacing: 1px;
+  color: #fbcf48;
   padding: 0;
 }
 .two__status_wrap {
@@ -469,12 +456,12 @@ a {
 /* #region footer */
 .footer {
   height: 60px;
-  background-color: var(--biro-blue);
+  background-color: #303a49;
 }
 .footer__border {
   height: 50%;
   border-radius: 16px;
-  border-top: 3px solid var(--solarized);
+  border-top: 3px solid #fbcf48;
 }
 
 /* #endregion */
@@ -519,8 +506,8 @@ a {
           align-items: center;
   text-align: center;
   font-size: 20px;
-  letter-spacing: var(--text-letsp);
-  background-color: var(--burka-black);
+  letter-spacing: 1px;
+  background-color: #354051;
 }
 .error-page__title {
   display: -webkit-box;
@@ -533,13 +520,13 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: var(--solarized);
+  color: #fbcf48;
 }
 .error-page__subtitle {
-  color: var(--text-blue);
+  color: #c4dae7;
 }
 .error-page__errror {
-  color: var(--green);
+  color: #03b881;
 }
 
 /* #endregion */
@@ -590,8 +577,8 @@ a {
     bottom: 0;
     left: 0;
     padding: 60px 0 0 0;
-    color: var(--solarized);
-    background-color: var(--biro-blue);
+    color: #fbcf48;
+    background-color: #303a49;
     -webkit-transform: translateY(-105%);
         -ms-transform: translateY(-105%);
             transform: translateY(-105%);
