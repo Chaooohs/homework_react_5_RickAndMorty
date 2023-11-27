@@ -144,6 +144,7 @@ a {
 .header {
   position: relative;
   background-color: $biro-blue;
+  box-shadow: 0 1px 12px 0px rgba(0 0 0 / 100%);
 
   &::before {
     content: '';
@@ -154,7 +155,6 @@ a {
     right: 0;
     height: 60px;
     background-color: $biro-blue;
-    box-shadow: 0 1px 12px 0px rgba(0 0 0 / 100%);
   }
 
   &_box {

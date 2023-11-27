@@ -125,6 +125,8 @@ a {
 .header {
   position: relative;
   background-color: #303a49;
+  -webkit-box-shadow: 0 1px 12px 0px rgb(0, 0, 0);
+          box-shadow: 0 1px 12px 0px rgb(0, 0, 0);
 }
 .header::before {
   content: "";
@@ -135,8 +137,6 @@ a {
   right: 0;
   height: 60px;
   background-color: #303a49;
-  -webkit-box-shadow: 0 1px 12px 0px rgb(0, 0, 0);
-          box-shadow: 0 1px 12px 0px rgb(0, 0, 0);
 }
 .header_box {
   height: 60px;
