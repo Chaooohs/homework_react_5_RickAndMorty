@@ -22,18 +22,32 @@ const Form = ({ setSearchParams, paramsFeedback }) => {
   }
 
   const clear = () => {
-    setSearch({ name: '', status: '' })
+    setSearch({ name: '', status: 'status', gender: 'gender', species: 'species' })
   }
 
   return (
     <form onSubmit={handleSubmit} id="form">
       <div className="form container">
         <div className="form__search">
-          <input className="form__input" type="text" name="search" value={search.name} onChange={e => setSearch(e.target.value)}></input>
+          <input
+            className="form__input"
+            type="text"
+            name="search"
+            defaultValue={search.name}
+            onChange={e => setSearch(e.target.value)}
+          >
+          </input>
           <button className="form__button button" type="submit">go</button>
         </div>
 
-        <button className="form__reset btn_txt text_sm hover_rd" type="reset" from="form" onClick={clear}>clear</button>
+        <button
+          className="form__reset btn_txt text_sm hover_rd"
+          type="reset"
+          from="form"
+          onClick={clear}
+        >
+          clear
+        </button>
 
         <Selects search={search} />
       </div>

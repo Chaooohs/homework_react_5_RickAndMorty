@@ -317,6 +317,7 @@ a {
   z-index: 10;
   top: 0;
   left: 0;
+  width: 100%;
   line-height: 125%;
   border: none;
   outline: none;
@@ -330,11 +331,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    column-gap: 3rem;
     margin: 1.5rem auto 0;
     background-color: $burka-black;
   }
 
   &__layout {
+    width: 208px;
     position: relative;
     display: flex;
     align-items: center;
@@ -376,6 +379,11 @@ a {
 
 .option.option_open {
   opacity: 1;
+}
+
+.cross {
+  line-height: 0;
+  color: $qing-dynasty-fire;
 }
 
 /* #endregion */
