@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Select } from "./Select";
+import { Selects } from "./Selects";
 
 const Form = ({ setSearchParams, paramsFeedback }) => {
 
@@ -8,13 +8,13 @@ const Form = ({ setSearchParams, paramsFeedback }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     const nameQuery = e.target.search.value
-    const statusQuery = e.target.status.value 
-    const genderQuery = e.target.gender.value 
-    const speciesQuery = e.target.species.value 
+    const statusQuery = e.target.status.getAttribute('value')
+    const genderQuery = e.target.gender.getAttribute('value')
+    const speciesQuery = e.target.species.getAttribute('value')
 
     const params = {}
     if (nameQuery.length) params.name = nameQuery
-    if (statusQuery.length) params.status = statusQuery
+    if (statusQuery) params.status = statusQuery
     if (genderQuery.length) params.gender = genderQuery
     if (speciesQuery.length) params.species = speciesQuery
 
@@ -22,7 +22,7 @@ const Form = ({ setSearchParams, paramsFeedback }) => {
   }
 
   const clear = () => {
-    setSearch({ name: '' })
+    setSearch({ name: '', status: '' })
   }
 
   return (
@@ -34,8 +34,8 @@ const Form = ({ setSearchParams, paramsFeedback }) => {
         </div>
 
         <button className="form__reset btn_txt text_sm hover_rd" type="reset" from="form" onClick={clear}>clear</button>
-        
-        <Select search={search} />
+
+        <Selects search={search} />
       </div>
     </form>
   )

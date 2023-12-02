@@ -137,6 +137,16 @@ a {
   color: $text-blue;
 }
 
+.text_500 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: $text-letsp;
+  line-height: 1;
+  color: $text-blue;
+  text-transform: uppercase;
+}
+
 /* #endregion */
 
 /* #region header */
@@ -145,17 +155,6 @@ a {
   position: relative;
   background-color: $biro-blue;
   box-shadow: 0 1px 12px 0px rgba(0 0 0 / 100%);
-
-  &::before {
-    content: '';
-    position: static;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background-color: $biro-blue;
-  }
 
   &_box {
     height: 60px;
@@ -314,15 +313,16 @@ a {
 /* #region select */
 
 .select {
-  position: absolute;
+  position: relative;
+  z-index: 10;
   top: 0;
   left: 0;
   line-height: 125%;
-  padding: 40px 0 0;
   border: none;
   outline: none;
   background: transparent;
   appearance: none;
+  padding: 0 1rem;
   cursor: pointer;
 
   &__wrap {
@@ -331,17 +331,51 @@ a {
     align-items: center;
     justify-content: space-evenly;
     margin: 1.5rem auto 0;
+    background-color: $burka-black;
   }
 
   &__layout {
     position: relative;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
   }
 
   &__option {
     color: $burka-black;
   }
+}
+
+.option {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  top: 50px;
+  left: -2.5rem;
+  width: 10rem;
+  color: $text-blue;
+  border-radius: 8px;
+  border: 2px solid $text-blue;
+  background-color: $burka-black;
+  padding: 10px;
+  opacity: 0;
+  transition: all .3s linear;
+  
+  & div {
+    width: 100%;
+    text-align: center;
+    
+    &:hover {
+      color: $biro-blue;
+      border-radius: 12px;
+      background-color: $solarized;
+    }
+  }
+}
+
+.option.option_open {
+  opacity: 1;
 }
 
 /* #endregion */
@@ -547,8 +581,18 @@ a {
     position: fixed;
     width: 100%;
     z-index: 30;
+    box-shadow: none;
+
     &::before {
+      content: '';
       position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: $biro-blue;
+      box-shadow: 0 1px 12px 0px rgba(0 0 0 / 100%);
     }
   }
 
