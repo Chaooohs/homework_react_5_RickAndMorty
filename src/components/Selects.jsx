@@ -59,24 +59,26 @@ const Selects = ({ search }) => {
           onClick={() => setStatus(!isStatus)}
           ref={refStatus}
         >
-          <span className="text_500" >status:</span>
-          <input
-            className="select text_500"
-            type="text"
-            name="status"
-            data-input="status"
-            defaultValue={isStatusValue}
-            onMouseDown={menuSelect}
-            placeholder="filter"
-          >
-          </input>
-          {
-            isStatusValue &&
-            <span
-              className="cross"
-              onClick={() => setStatusValue("")}
-            >&#10007; </span>
-          }
+          <div className="select__box">
+            <span className="text_500" >status:</span>
+            <input
+              className="select text_500"
+              type="text"
+              name="status"
+              data-input="status"
+              defaultValue={isStatusValue}
+              onMouseDown={menuSelect}
+              placeholder="filter"
+            >
+            </input>
+            {
+              isStatusValue &&
+              <span
+                className="cross"
+                onClick={() => setStatusValue("")}
+              >&#10007; </span>
+            }
+          </div>
           <div className={`option ${isStatus ? "option_open" : ""}`}>
             <div data-type="alive" onClick={menuStatus}>alive</div>
             <div data-type="dead" onClick={menuStatus}>dead</div>
@@ -89,24 +91,26 @@ const Selects = ({ search }) => {
           onClick={() => setGender(!isGender)}
           ref={refGenger}
         >
-          <span className="text_500">gender:</span>
-          <input
-            className="select text_500"
-            type="text"
-            name="gender"
-            data-input="gender"
-            defaultValue={isGenderValue}
-            onMouseDown={menuSelect}
-            placeholder="filter"
-          >
-          </input>
-          {
-            isGenderValue &&
-            <span
-              className="cross"
-              onClick={() => setGenderValue("")}
-            >&#10007;</span>
-          }
+          <div className="select__box">
+            <span className="text_500">gender:</span>
+            <input
+              className="select text_500"
+              type="text"
+              name="gender"
+              data-input="gender"
+              defaultValue={isGenderValue}
+              onMouseDown={menuSelect}
+              placeholder="filter"
+            >
+            </input>
+            {
+              isGenderValue &&
+              <span
+                className="cross"
+                onClick={() => setGenderValue("")}
+              >&#10007;</span>
+            }
+          </div>
           <div className={`option ${isGender ? "option_open" : ""}`}>
             <div data-type="female" onClick={menuGender}>female</div>
             <div data-type="male" onClick={menuGender}>male</div>
@@ -120,24 +124,26 @@ const Selects = ({ search }) => {
           onClick={() => setSpecies(!isSpecies)}
           ref={refSpecies}
         >
-          <span className="text_500">species:</span>
-          <input
-            className="select text_500"
-            type="text"
-            name="species"
-            data-input="species"
-            defaultValue={isSpeciesValue}
-            onMouseDown={menuSelect}
-            placeholder="filter"
-          >
-          </input>
-          {
-            isSpeciesValue &&
-            <span
-              className="cross"
-              onClick={() => setSpeciesValue("")}
-            >&#10007;</span>
-          }
+          <div className="select__box">
+            <span className="text_500">species:</span>
+            <input
+              className="select text_500"
+              type="text"
+              name="species"
+              data-input="species"
+              defaultValue={isSpeciesValue}
+              onMouseDown={menuSelect}
+              placeholder="filter"
+            >
+            </input>
+            {
+              isSpeciesValue &&
+              <span
+                className="cross"
+                onClick={() => setSpeciesValue("")}
+              >&#10007;</span>
+            }
+          </div>
           <div className={`option ${isSpecies ? "option_open" : ""}`}>
             <div data-type="human" onClick={menuSpecies}>human</div>
             <div data-type="humanoid" onClick={menuSpecies}>humanoid</div>

@@ -302,9 +302,8 @@ a {
   }
 
   &__reset {
-    float: left;
     width: 100px;
-    margin: 1.5rem 0 0 10px;
+    margin-top: 1.5rem;
   }
 }
 
@@ -314,11 +313,9 @@ a {
 
 .select {
   position: relative;
-  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
-  line-height: 125%;
   border: none;
   outline: none;
   background: transparent;
@@ -327,10 +324,9 @@ a {
   cursor: pointer;
 
   &__wrap {
-    width: 70%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     column-gap: 3rem;
     margin: 1.5rem auto 0;
     background-color: $burka-black;
@@ -351,6 +347,7 @@ a {
 
 .option {
   position: absolute;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -364,11 +361,11 @@ a {
   padding: 10px;
   opacity: 0;
   transition: all .3s linear;
-  
+
   & div {
     width: 100%;
     text-align: center;
-    
+
     &:hover {
       color: $biro-blue;
       border-radius: 12px;
@@ -560,7 +557,7 @@ a {
 
 /* #endregion */
 
-/* #region media */
+/* #region media 992px */
 
 @media (max-width: 992px) {
 
@@ -676,7 +673,6 @@ a {
   }
 
   .form__reset {
-    float: none;
     display: flex;
   }
 
@@ -688,11 +684,17 @@ a {
 
   .select__wrap {
     width: 100%;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     row-gap: 60px;
     box-sizing: border-box;
-    padding: 0 10px;
-    margin: 2.5rem 0px 0;
+    padding: 0 18px;
+    margin-top: 4.5rem;
+  }
+
+  .option {
+    top: 0px;
+    left: 17.5rem;
   }
 
   .box {
@@ -718,6 +720,34 @@ a {
   .two {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+/* #endregion */
+
+/* #region media 548 */
+
+@media (max-width: 548px) {
+
+  .select__layout {
+    flex-direction: column;
+  }
+
+  .select__box {
+    display: flex;
+    align-items: center;
+  }
+
+  .option {
+    position: static;
+    height: 0;
+    overflow: auto;
+  }
+
+  .option.option_open {
+    height: 15rem;
+    justify-content: space-around;
+    margin-top: 2rem;
   }
 }
 
