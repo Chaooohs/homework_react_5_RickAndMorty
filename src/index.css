@@ -279,9 +279,11 @@ a {
 .select__layout {
   width: 208px;
   position: relative;
+  cursor: pointer;
+}
+.select__box {
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 .select__option {
   color: #354051;
@@ -589,9 +591,6 @@ a {
   .box__content {
     grid-template-columns: repeat(auto-fill, minmax(146px, 1fr));
   }
-  .box__btn_wrap {
-    width: 100%;
-  }
   .card__name {
     font-size: 14px;
   }
@@ -607,6 +606,7 @@ a {
 /* #region media 548 */
 @media (max-width: 548px) {
   .select__layout {
+    width: 100%;
     flex-direction: column;
   }
   .select__box {

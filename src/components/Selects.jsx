@@ -22,6 +22,12 @@ const Selects = ({ search }) => {
   const [isSpecies, setSpecies] = useState(false)
   const [isSpeciesValue, setSpeciesValue] = useState()
 
+  useEffect(() => {
+     setStatusValue(search.status)
+     setGenderValue(search.gender)
+     setSpeciesValue(search.species)
+  }, [search])
+
   const menuSelect = (e) => {
     e.preventDefault()
   }
